@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
+    <title>Application Form</title>
+    <link rel="shortcut icon" href="images\TITLE BAR ICON\form.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Application Form</h1>
+    <!-- Application form using only html css is for alignment only-->
+</head>
+
+<body background="images\form background.jpg">
+    <form>
+        <label>Passport Size Photo</label><input type="file" required><br><br>
+        <label for="N">Name</label><input id="N" autofocus placeholder="Enter your name" type="text" required /><br><br>
+        <label>DOB</label><input type="date" required /><br><br>
+        <label for="E">Email</label><input id="E" placeholder="Enter your email" type="email" required /><br><br>
+        <label>Phone</label><input type="tel" placeholder="Enter mobile number" required><br><br>
+        <label for="P">Password</label><input id="P" placeholder="Enter password" type="password" required><br><br>
+        <label for="G">Gender</label>
+        <input type="radio" name="Gender" value="Male" required>Male
+        <input type="radio" name="Gender" value="Female" required>Female<br><br>
+        <label>Branch</label>
+        <select>
+            <option name="Branch" value="EEE">EEE</option>
+            <option name="Branch" value="EIE">EIE</option>
+            <option name="Branch" value="ECE">ECE</option>
+            <option name="Branch" value="ICE">ICE</option>
+            <option name="Branch" value="Others">Others</option>
+        </select><br><br>
+        <label>Languages</label>
+        <input type="checkbox" value="C">C
+        <input type="checkbox" value="Java">Java
+        <input type="checkbox" value="Python">Python</br></br>
+        <label for="C">Comment</label>
+        <textarea id="C" placeholder="Share your thoughts" rows="4" cols="20"></textarea><br><br>
+        <label for="c">Choose any color</label>
+        <input id="c" type="color" required><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kanit:wght@700&family=Montserrat:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="images\TITLE BAR ICON\resume2.png" type="image/x-icon">
+    <title>PERSONAL RESUME</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 120vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 300px;
+            height: 120vh;
+            float: left;
+        }
+
+        .about {
+            height: 560px;
+            background-color: black;
+            color: white;
+        }
+
+        .about h1 {
+            padding-top: 40px;
+            padding-left: 25px;
+            font-family: 'Bree Serif', serif;
+            font-family: 'Montserrat', sans-serif;
+            color: yellow;
+            text-shadow: 2px 2px 21px limegreen;
+        }
+
+        .about>h2 {
+            font-family: 'Bree Serif', serif;
+            font-family: 'Montserrat', sans-serif;
+            color: limegreen;
+            padding-top: 40px;
+            padding-left: 25px;
+        }
+
+        .about>p {
+            font-size: larger;
+            margin: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            line-height: 25px;
+        }
+
+        address {
+            height: 200px;
+            background-color: rgb(195, 243, 82);
+        }
+
+        address>p {
+            padding-top: 30px;
+            line-height: 25px;
+            padding-left: 70px;
+        }
+
+        .phone {
+            font-weight: bolder;
+        }
+
+        .right {
+            right: 0;
+            width: 30vw;
+            height: 100%;
+            float: right;
+            background-color: rgb(213, 212, 213);
+        }
+
+        .right>header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 3px saddlebrown;
+            height: 404px;
+            background-color: paleturquoise;
+
+        }
+
+        .right>header>h1 {
+            font-size: 60px;
+            font-family: 'Bree Serif', serif;
+            font-family: 'Kanit', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        main {
+            padding-top: 10px;
+        }
+
+        .edu>h2,
+        .skills>h2,
+        .experience>h2 {
+            text-shadow: 2px 2px yellowgreen;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .edu>h2::after,
+        .skills>h2::after,
+        .experience>h2::after {
+            content: '';
+            background-color: green;
+            display: block;
+            content: '';
+            width: 80%;
+            height: 3px;
+        }
+
+        main>section {
+            margin-left: 30px;
+        }
+
+        .edu {
+            padding-top: 50px;
+        }
+
+        .experience,
+        .skills,
+        .edu {
+            padding-left: 50px;
+        }
+
+        .experience>p {
+            font-weight: bolder;
+            line-height: 20px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="photo">
+            <img src="images/man.avif" alt="" width="100%" height="400px">
+        </section>
+        <section class="about">
+            <h1>JAMEEL AHMED. J</h1>
+            <h2>ABOUT ME</h2>
+            <p>UI/UX designer with years of experience and a passion for producing user-friendly and aesthetically
+                pleasing digital experiences. Looking for a challenging position where I can put my skills in user
+                research, wireframing, prototyping, and interface design to work producing outstanding designs that are
+                user-centric.</p>
+        </section>
+        <address>
+            <p><strong>123 Street Name City<br>Name, State,<br>Country, 12345</strong></p>
+            <p class="phone">+00 123 4567890</p>
+        </address>
+    </div>
+    <div class="right">
+        <header>
+            <h1>UI/UX<br>Design</h1>
+        </header>
+        <main>
+            <section class="edu">
+                <h2>EDUCATION</h2><br>
+                <p>Bachelor of science in Interaction Design<br>Sunrise University<br>Graduated: 2025</p>
+            </section><br><br>
+            <section class="skills">
+                <h2>SKILLS</h2><br>
+                <ul type="square">
+                    <li>Proficient in design tools</li>
+                    <li>Strong understanding of user-centered design principles</li>
+                    <li>Experience in wireframing and prototyping tools</li>
+                    <li>Ability to conduct user research</li>
+                    <li>Strong Communication and Collabration abilities</li>
+                </ul>
+                <br><br>
+            </section>
+            <section class="experience">
+                <h2>EXPERIENCE</h2><br>
+                <p>INTERN UI/UX Design<br>Bronze Anvil Agency,<br>2026</p><br><br>
+                <ul type="circle">
+                    <li>Creating wireframes and prototypes for client projects.</li>
+                    <li>Gathered user feedback to inform design iterations.</li>
+                    <li>Collaborated with team members on design brainstorming.</li>
+                    <li>Assisted in creating design documentation and style guides.</li>
+                    <li>Assisted in maintaining design assets and project files</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="shortcut icon" href="images\TITLE BAR ICON\counter.png" type="image/x-icon">
+    <title>Counter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: palegreen;
+        }
+
+        .container {
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 100px;
+        }
+
+        @media (max-width:500px) {
+            #heading {
+                font-size: 55px;
+            }
+        }
+        @media (max-height:400px){
+            .container{
+                height: 30%;
+            }
+        }
+        @media (max-height:312px){
+            .container{
+                height: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading" align="center">COUNTER</h1><br>
+    <h1 id="type" align="center">0</h2>
+        <div class="container">
+            <button type="button" id="inc" class="btn btn-success btn-lg">Increase</button>
+            <button type="button" id="res" class="btn btn-danger btn-lg">Reset</button>
+            <button type="button" id="dec" class="btn btn-primary btn-lg">Decrease</button>
+        </div>
+        <script>
+            let count = 0;
+            document.getElementById("inc").onclick = function () {
+                count += 1;
+                document.getElementById("type").innerHTML = count;
+            }
+            document.getElementById("res").onclick = function () {
+                count = 0;
+                document.getElementById("type").innerHTML = count;
+            }
+            document.getElementById("dec").onclick = function () {
+                count -= 1;
+                document.getElementById("type").innerHTML = count;
+            }
+        </script>
+        <script src="js\bootstrap.min.js"></script>
+        <script src="js\jquery.min.js"></script>
+</body>
+
+</html>

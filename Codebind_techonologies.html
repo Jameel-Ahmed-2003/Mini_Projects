@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEST INPLANT TRAINING INSTITUTE</title>
+    <style>
+        /* ELEMENT SELECTOR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+            animation-name: op;
+            animation-duration: 6s;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav,
+        button {
+            background-color: rgb(49, 56, 62);
+        }
+
+        button {
+            padding: 20px;
+            border: none;
+            cursor: pointer;
+            font: 15px bold;
+        }
+
+        center {
+            animation-name: alg;
+            animation-duration: 2s;
+        }
+
+        span {
+            color: black
+        }
+
+        /*header starting  */
+        header {
+            height: 15vh;
+            width: 100vw;
+        }
+
+        .top ul {
+            padding-top: 7px;
+            font-weight: bold;
+            font-size: large;
+            height: 5vh;
+            width: 100vw;
+            display: flex;
+            padding-left: 90px;
+            justify-content: space-around;
+            background-color: skyblue;
+        }
+
+        .bottom {
+            height: 10vh;
+            width: 100vw;
+        }
+
+        .bottom img {
+            padding-left: 100px;
+            padding-top: 0px;
+        }
+
+        /*  header ending */
+
+        /* main tag starting */
+        main {
+            height: 80vh;
+            width: 100vw;
+        }
+
+        .one {
+            height: 50vh;
+            width: 100vw;
+        }
+
+        .two {
+            height: calc(80vh - 50vh);
+            width: 100vw;
+            color: rgb(3, 157, 252);
+            padding-top: 20px;
+            margin: 20px;
+        }
+
+        .two h1 {
+            font-size: xx-large;
+            letter-spacing: 1px;
+        }
+
+        .two h3 {
+            font-size: x-large;
+            letter-spacing: 1px;
+        }
+
+        .two h1 {
+            animation-name: aln;
+            animation-duration: 2s;
+        }
+
+        .heading {
+            margin: 50px;
+            margin-left: 570px;
+            color: rgb(51, 144, 209);
+        }
+
+        .heading p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+        }
+
+        .heading h3 {
+            margin-left: 130px;
+            font-weight: lighter;
+            font-size: 30px;
+        }
+
+        /* CLASS SELECTOR */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .about,
+        .ipt,
+        .services,
+        .learn,
+        .intern,
+        .inplant {
+            display: none;
+            box-shadow: 5px 8px 15px rgba(0, 0, 0, .2);
+        }
+
+        /* HOVER EFFECT */
+        button:hover {
+            background-color: rgb(95, 180, 237);
+        }
+
+        /* DISPLAY DROPDOWN */
+        .navbar li:hover .about {
+            display: block;
+        }
+
+        .navbar li:hover .services {
+            display: block;
+        }
+
+        .navbar li:hover .learn {
+            display: block;
+        }
+
+        .learn:hover .intern {
+            margin-left: 90px;
+            display: block;
+            box-shadow: 5px 8px 15px rgba(0, 0, 0, .5)
+        }
+
+        .one .heading button:hover {
+            background-color: rgb(49, 57, 63);
+            /*    problem  solve this        */
+            color: rgb(95, 180, 237);
+        }
+
+        /* TEXT COLOR */
+        .about li>button>a {
+            color: yellow;
+        }
+
+        .services li>button>a {
+            color: yellow;
+        }
+
+        .learn li>button>a {
+            color: yellow;
+        }
+
+
+        /* ANIMATIONS */
+        @keyframes op {
+
+            /*opacity*/
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes alg {
+
+            /*alignment*/
+            from {
+                transform: translateX(1300px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes aln {
+            from {
+                transform: translateX(-1300px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+
+        }
+
+
+        /* container */
+        .container {
+            display: flex;
+            margin-left: 430px;
+            cursor: pointer;
+        }
+
+        .col1,
+        .col2,
+        .col3,
+        .col4 {
+            height: 400px;
+            width: 280px;
+            background-color: palegreen;
+            padding: 10px;
+        }
+
+        .col1 {
+            background-color: rgb(95, 181, 236);
+        }
+
+        .col2 {
+            background-color: rgb(20, 144, 224);
+        }
+
+        .col3 {
+            background-color: rgb(42, 161, 237);
+        }
+
+        .col4 {
+            background-color: rgb(75, 175, 238);
+        }
+
+        .container img {
+            margin: 50px;
+            margin-left: 100px;
+            transition: 1s;
+        }
+
+        .container img:hover {
+            transform: rotateY(180deg);
+        }
+
+        .container h2 {
+            font-weight: lighter;
+            text-align: center;
+        }
+
+        .container p {
+            color: white;
+            line-height: 25px;
+            font-size: 15px;
+            letter-spacing: 1.3px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row {
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            width: 250px;
+        }
+
+        .intern {
+            padding: 5px;
+            color: rgb(51, 145, 208);
+        }
+
+        .internship {
+            margin-top: -120px;
+            padding-left: 15px;
+            cursor: pointer;
+        }
+
+        footer {
+            height: 90vh;
+            width: 100vw;
+        }
+
+        footer ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            color: white;
+        }
+
+        .ct li {
+            padding-top: 5px;
+        }
+
+        .ct {
+            display: block;
+            margin-top: 25px
+        }
+
+        span {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        marquee {
+            padding-top: 3px;
+            height: 3vh;
+            width: 100vw;
+            color: rgb(42, 161, 237);
+        }
+    </style>
+    <base href="images/">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <ul>
+                <li>9789617617</li>
+                <li><a style="color:black" href="mailto:info@codebindtechnologies.com">info@codebindtechnologies.com</a>
+                </li>
+                <li><a style="color:black" href="#">Register Now</a></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <img style="margin-bottom:10px;" src="logo.png" alt="logo">
+            <img style="margin-left:700px;" src="certified.png" alt="certifications">
+        </div>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <li><button><a href="#">HOME</a></button></li>
+            <li><button><a href="#">ABOUT</a></button>
+                <ul class="about">
+                    <li><button><a href="">WHO WE ARE</a></button></li>
+                    <li><button><a href="">WHY CHOOSE US</a></button></li>
+                    <li><button><a href="">COMPANY PROFILE</a></button></li>
+                    <li><button><a href="">CAREER</a></button></li>
+                </ul>
+            </li>
+            <li><button><a href="">LEARN</a></button>
+                <ul class="learn">
+                    <li><button><a id="n1" href="#">INTERNSHIP</a></button>
+                        <ul class="intern">
+                            <li><button><a href="#">AI</a></button></li>
+                            <li><button><a href="#">DS</a></button></li>
+                            <li><button><a href="#">ML</a></button></li>
+                            <li><button><a href="#">IT</a></button></li>
+                            <li><button><a href="#">CSE</a></button></li>
+                            <li><button><a href="#">ECE</a></button></li>
+                            <li><button><a href="#">ICE</a></button></li>
+                            <li><button><a href="#">EIE</a></button></li>
+                            <li><button><a href="#">EEE</a></button></li>
+                            <li><button><a href="#">MECH</a></button></li>
+                            <li><button><a href="#">CIVIL</a></button></li>
+                            <li><button><a href="#">BIOMEDICAL</a></button></li>
+                            <li><button><a href="#">ARTS AND SCIENCE</a></button></li>
+                        </ul>
+                    </li>
+                    <li><button><a id="n2" href="#">INPLANT TRAINING( IPT )</a></button>
+                        <ul class="inplant">
+                            <li><button><a href="#">AI</a></button></li>
+                            <li><button><a href="#">DS</a></button></li>
+                            <li><button><a href="#">ML</a></button></li>
+                            <li><button><a href="#">IT</a></button></li>
+                            <li><button><a href="#">CSE</a></button></li>
+                            <li><button><a href="#">ECE</a></button></li>
+                            <li><button><a href="#">ICE</a></button></li>
+                            <li><button><a href="#">EIE</a></button></li>
+                            <li><button><a href="#">EEE</a></button></li>
+                            <li><button><a href="#">MECH</a></button></li>
+                            <li><button><a href="#">CIVIL</a></button></li>
+                            <li><button><a href="#">BIOMEDICAL</a></button></li>
+                            <li><button><a href="#">ARTS AND SCIENCE</a></button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><button><a href="#">SERVICES</a></button>
+                <ul class="services">
+                    <li><button><a href="#">WEBSITE DEVELOPMENT</a></button></li>
+                    <li><button><a href="#">ECOMMERCE SELLER ACCOUNT MANAGEMENT</a></button></li>
+                    <li><button><a href="#">MOBILE APP DEVELOPMENT</a></button></li>
+                    <li><button><a href="#">SEARCH ENGINE OPTIMIZATION</a></button></li>
+                    <li><button><a href="#">DIGITAL MARKETING</a></button></li>
+                    <li><button><a href="#">TESTING</a></button></li>
+                    <li><button><a href="#">OPEN SOURCE CUSTOMIZATION</a></button></li>
+                    <li><button><a href="#">MAINTENANCE</a></button></li>
+                    <li><button><a href="#">IT SUPPORT</a></button></li>
+                </ul>
+            </li>
+            <li><button><a href="#">PRODUCTS</a></button>
+            </li>
+            <li><button><a href="#">STUDENTS CORNER</a></button></li>
+            <li><button><a href="#">REGISTRATION</a></button></li>
+            <li><button><a href="#">CONTACT</a></button></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="one">
+            <img style="position: absolute; z-index: 1; margin-left: 60px;" src="home.png" alt="">
+            <img style="position: absolute; z-index: -1; height:50vh;width:100%; filter: blur(8px);" src="i1.jpg"
+                alt="">
+            <img style="height: 200px; position: absolute; z-index: 2; margin-top: 170px; right:0px; "
+                src="codebind-internship-days.png" alt="">
+            <div class="heading">
+                <p>Take Your Career To The Next Level <br><br>
+                <p>
+                <h3><span>WELCOME TO</span><br>CODE<span>BIND</span> TECHNOLOGIES</h3>
+                <button
+                    style=" background-color: rgb(95,180,237); margin-top: 110px; margin-left: 140px; border-radius: 40px; padding: 10px; width: 120px;">Register
+                    Now</button>
+            </div>
+        </section>
+
+        <section class="two">
+            <h1 style="margin-left: 610px;">BEST INPLANT TRAINING AND INTERNSHIP</h1><br><br>
+            <center>
+                <h3>WELCOME TO CODEBIND TECHNOLOGIES <br> <br>ISO 9001:2015 CERTIFIED COMPANY</h3>
+            </center>
+        </section>
+    </main>
+    <div class="container">
+        <div class="col1">
+            <img src="icons8-internship-50.png" alt="">
+            <h2>Inplant Training ( IPT )</h2><br><br>
+            <p>Codebind Technologies offers Best Inplant Training (IPT) for cse, it, ece, eee, mech, bsc, mca etc., with
+                free workshop
+                and free placement training.
+            </p>
+        </div>
+        <div class="col2">
+            <img src="icons8-education-50.png" alt="">
+            <h2>Internship</h2><br><br>
+            <p>Codebind Technologies offering best internship for cse, it, ece, eie, ice, civil, mech, bsc, mcsa etc.,
+                with project and
+                free workshop and free placement training.
+            </p>
+        </div>
+        <div class="col3">
+            <img src="icons8-social-50.png" alt="">
+            <h2>Real Time Training</h2><br><br>
+            <p>Codebind Technologies provide best real time training in latest technologies with project exposure in
+                practically.</p>
+        </div>
+        <div class="col4">
+            <img src="icons8-services-50.png" alt="">
+            <h2>Services</h2><br><br>
+            <p>We offering website designing, seo, sem, digital marketing, android and mobile application, IT support
+                for huge number
+                of companies with very good support.
+            </p>
+        </div>
+    </div>
+    <div class="info">
+        <div id="oops" class="internship">
+            <h3 style="margin-left: 10px;">INTERNSHIP</h3>
+            <div class="intern">internship in Chennai</div>
+            <div class="intern">internship in Chennai for CSE</div>
+            <div class="intern">internship in Chennai for IT</div>
+            <div class="intern">internship in Chennai for ECE</div>
+            <div class="intern">internship in Chennai for EEE</div>
+            <div class="intern">internship in Chennai for EIE</div>
+            <div class="intern">internship in Chennai for ICE</div>
+            <div class="intern">internship in Chennai for CIVIL</div>
+            <div class="intern">internship in Chennai for MECHANICAL</div>
+        </div>
+        <div class="about_us">
+            <h3 style="text-align: center;"><br>GREAT EXPERIENCE IN</h3>
+            <div style="background-color: rgb(51,145,208);" class="row">Inplant Training - IPT 100%</div>
+            <div style="background-color: rgb(138,215,85);" class="row">Internship 100%</div>
+            <div style="background-color: rgb(221,153,51);" class="row">Services 100%</div>
+            <div style="background-color: rgb(239,239,34);" class="row">Projects 100%</div>
+            <div style="background-color: rgb(237,113,52);" class="row">Products 100%</div>
+            <div style="background-color: rgb(20,127,116);" class="row">Client Satisfaction 100%</div>
+            <div style="background-color: rgb(31,218,181);" class="row">Customer Support 100%</div>
+            <div style="background-color: rgb(182,42,99);" class="row">Development 100%</div>
+        </div>
+    </div>
+    <marquee direction="right">best inplant training ipt for civil students
+        | best inplant training ipt for ece | best inplant training ipt for eee | best inplant training ipt for mech |
+        best
+        inplant training ipt for eie | best inplant training ipt for ice | best inplant training ipt for bsc | inplant
+        training
+        | best inplant training | free inplant training | inplant training for college students | gamified practical
+        sessions
+    </marquee>
+    <footer>
+        <ul style="padding: 10px; padding-top:50px; background-color:rgb(52,63,68)">
+            <li class="li"><span>ABOUT COMPANY</span>
+                <ul class="ct">
+                    <li style="width:300px; word-spacing: 2px; line-height: 20px;">Codebind Technologies is a new
+                        evolution to supporting the enterprises across the world through designing and
+                        developing the websites, application development in different platforms with fulfilling the
+                        other marketing
+                        requirements.
+                    </li>
+                </ul>
+            </li>
+            <li class="li"><span>MENUS</span>
+                <ul class="ct">
+                    <li>Home</li>
+                    <li>Company Profile</li>
+                    <li>Blog</li>
+                    <li>Inplant Training (IPT)</li>
+                    <li>Internship</li>
+                    <li>Pricing</li>
+                    <li>Recognition</li>
+                    <li>Awards and Achievement</li>
+                </ul>
+            </li>
+            <li class="li"><span>QUICK LINKS</span>
+                <ul class="ct">
+                    <li>Inplant training ( IPT ) in Chennai</li>
+                    <li>Inplant training ( IPT ) in Coimbatore</li>
+                    <li>Inplant training ( IPT ) in Trichy</li>
+                    <li>Inplant training ( IPT ) in Madurai</li>
+                    <li>Inplant training ( IPT ) in Salem</li>
+                    <li>Inplant training ( IPT ) in Thanjavur</li>
+                </ul>
+            </li>
+            <li class="li"><span>WIDGETS</span>
+                <ul class="ct">
+                    <li>This is a widget area. Set widget here.</li>
+                </ul>
+            </li>
+        </ul>
+        <div style="color: rgb(161,144,119); background-color: rgb(48,56,63); margin: 0px; padding: 10px;" class="cpr">
+            <p>
+                <center>COPYRIGHTS 2022. CODEBIND TECHNOLOGIES ALL RIGHTS RESERVED.</center>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

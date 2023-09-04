@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJCE</title>
+    <link rel="shortcut icon" href="TITLE BAR ICON/SJCE.jpeg" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+        }
+        .container{height: auto;width: auto;}
+        .container img{height:12.5vh;width: 100vw;}
+        .container nav  ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            height: fit-content;
+            width: 100vw;
+            background-color: #424343;
+        }
+        .container nav ul li button{
+            font-size: 14px;
+            background-color: #424343;
+            border: none;
+            padding: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: white;
+            font-weight: bold;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+        }
+        .container nav ul li button:hover{
+            background-color: white;
+            color: black;
+        }
+        marquee{
+            height: fit-content;
+            width: 100vw;
+            font-weight: bolder;
+            font-size: medium;
+        }
+        aside{
+            height: fit-content;
+            color: white;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 10vh;
+            background-color: red;
+            text-align: center;
+        }
+        .logo{
+            width:140px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .logo img{
+            margin: 10px;
+            height: 80px;
+            width: 80px;
+            cursor: pointer;
+        }
+        .management .people{
+            padding-top: 10px;
+            display: flex;
+            /* justify-content: space-evenly; */
+            flex-wrap: wrap;
+        }
+        .management .people .prp{
+            height: 360px;
+            width: 360px;
+        }
+        .management .people .chairman img{
+            /* padding: 10px; */
+            width:360px;
+            height: 360px;
+        }
+        footer{display: flex;justify-content: space-evenly;background-color: rgb(66,67,67);color: white;}
+        li{
+            list-style: none;
+            padding-bottom: 10px;
+        }
+        footer li{font-size: larger;cursor: pointer;}
+        .copyright{
+            background-color: rgb(66,67,67);
+            color: white;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 29px;
+            width: 1881px;
+        }
+        .copyright span{
+            color: yellow;
+        }
+        .prp:hover .content{
+            transition: .5s;
+            transform:translateY(360px);
+            /* z-index: 1;
+            position: relative; */
+        }
+        .content{background-color: white;box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+             rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+             .imgs{position: absolute;z-index: 1;}
+    </style>
+    <base href="images/">
+    
+</head>
+<body>
+    <div class="container">
+        <img src="College.jpg" alt="">
+        <nav>
+            <ul>
+                <li><button>Home</button></li>
+                <li><button>About Us</button></li>
+                <li><button>Student's Corner</button></li>
+                <li><button>Courses</button></li>
+                <li><button>COE</button></li>
+                <li><button>Alumni</button></li>
+                <li><button>Curriculum Regulation</button></li>
+                <li><button>Placements</button></li>
+                <li><button>ABHS</button></li>
+                <li><button>R&D</button></li>
+                <li><button>Infrastructure</button></li>
+                <li><button>Sports</button></li>
+                <li><button>Academies</button></li>
+                <li><button>Contact</button></li>
+            </ul>
+        </nav>
+        <marquee behavior="" direction="">Click here to view - Placement circular - Total Offers as on 21 07 2023  Click here to view
+            - Rules & Regulation</marquee>
+    </div>
+    <aside>Merit Admission 2023-2024</aside>
+    <div class="logo">
+        <img src="NBA.jpg" alt="">
+        <img src="NAAC.png" alt="">
+        <img src="NIRF.jpg" alt="">
+        <img style="width: 130px;" src="ARIIA logo.jpg" alt="">
+        <img src="NISP.jpg" alt="">
+        <img src="IIC.jpg" alt="">
+        <img src="AICTE.jpg" alt="">
+    </div>
+    <div class="management">
+        <h1 style="border-bottom: 3px solid rgb(3,119,188); padding-bottom: 10px; width: 90vw; margin-left: 80px;">Management</h1><br>
+        <div class="people">
+            <div class="chairman prp">
+                <img class="imgs" src="chairman.jpg" alt="">
+                <div class="content">
+                    <h1>Dr.B.Babu Manoharan</h1>
+                    <h3>M.A., M.B.A., Ph.D.,<br>St. Joseph's Group of Institutions</h3>
+                </div>
+            </div>
+            <div class="md prp">
+                <img class="imgs" src="md.jpg" alt="">
+                <div class="content">
+                    <h1>Mrs.S.Jessie Priya M.Com.,</h1>
+                    <h3>Managing Director<br>St.Joseph's Group of Institutions</h3>
+                </div>
+            </div>
+            <div class="exdir prp">
+                <img class="imgs" src="exdir.jpg" alt="">
+                <div class="content"></div>
+            </div>
+            <div class="principle prp">
+                <img class="imgs" src="principle.jpg" alt="">
+                <div class="content"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img style="height:98px; margin-top: 100px; margin-left: -150px;" src="College.jpg" alt="">
+        <div class="links">
+            <h1>Featured Links</h1>
+            <ul>
+                <li>Placements</li>
+                <li>ABHS</li>
+                <li>R & D</li>
+                <li>Courses</li>
+            </ul>
+            <ul>
+                <li>Infrastructure</li>
+                <li>Student's Corner</li>
+                <li>Sports</li>
+                <li>Feedback</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1>Contact Us</h1><br>
+            <address>OMR, Chennai - 119<br><br>Phone:044 - 24501060, 24501449<br><br>Fax:044 - 2450 0861</address>
+        </div>
+    </footer>
+    <div class="copyright"><center>All rights reserved St.Joseph's College of Engineering | Design by <span>Website Development Team</span></center></div>
+</body>
+</html>

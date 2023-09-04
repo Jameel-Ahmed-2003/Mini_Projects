@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Ferrari Website</title>
+    <link rel="stylesheet" href="css/ferrari_web.css">
+    <link rel="icon" href="images/title icon.jpg" type="">
+    <style>
+        video{
+            height:fit-content;
+            width:fit-content;
+        }
+        nav{
+            display:flex;
+            justify-content:center;
+            z-index: 1;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            padding:100px;
+            font-size:x-large;
+            font-weight: 200;
+            animation:light 2.5s linear infinite;
+        }
+        a:hover{
+            color:yellow;
+            text-shadow: 0 0 15px yellow, 0 0 25px yellow, 0 0 25px yellow;
+        }
+        .vid{
+            position:absolute;
+            z-index:-1;
+        }
+        @keyframes light{
+            0%{
+                filter:hue-rotate(0deg);
+            }
+            100%{
+                filter:hue-rotate(360deg);
+            }
+        }
+        .bottom{
+            height:100vh;
+            width:100vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="video">
+        <video src="images/3.mp4" autoplay loop plays class="vid"></video>
+        <nav>
+            <ul>
+                <li>
+                    <br><br>
+                    <a href="auto.html">AUTO</a>
+                    <a href="#">RACING</a>
+                    <a href="#">COLLECTIONS</a>
+                    <a href="#">UNIVERSE</a>
+                    <a href="#">CORPORATE</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

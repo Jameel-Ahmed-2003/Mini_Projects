@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images\TITLE BAR ICON\projects.png" type="image/x-icon">
+    <title>PROJECTS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            height: 190vh;
+            width: 100vw;
+        }
+
+        .name {
+            font-family: 'Roboto Slab', serif;
+            font-size: 60px;
+            text-align: center;
+            color: #302c2c;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Bree Serif', serif;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: large;
+            font-weight: bold;
+            margin-left: 500px;
+            margin-right: 500px;
+        }
+
+        .head {
+            font-family: 'Arvo', serif;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 1px 1px 10px yellow;
+        }
+
+        .container {
+            margin-top: 30px;
+            height: 100%;
+        }
+
+        .projects {
+            width: 98vw;
+            height: 480px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .img {
+            height: 440px;
+            width: 340px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px 0.3px palegreen;
+        }
+
+        img {
+            height: 440px;
+            width: 340px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .text {
+            height: 440px;
+            width: 340px;
+            background-color: none;
+            visibility: hidden;
+            color: white;
+        }
+
+        .img:hover img {
+            filter: blur(3px);
+        }
+
+        .img:hover .text {
+            transition: 2s;
+            position: relative;
+            transform: translateY(-220px);
+            visibility: visible;
+        }
+
+        .desc {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        span {
+            color: yellow;
+        }
+
+        @media screen and (max-width:1460px) {
+            .intro {
+                margin-left: 170px;
+                margin-right: 170px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .intro {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+
+            .name {
+                font-size: 40px;
+            }
+
+            .img {
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about">
+        <h1 class="name">JAMEEL AHMED. J</h1>
+        <h3>Web Developer</h3>
+        <p class="intro">I'm Jameel Ahmed. J a passionate web developer who has delved into the exciting world of HTML
+            and CSS, honing my skills through hands-on projects ranging from static webpages to dynamic creations. With
+            a solid foundation in the basics of web development, I've embarked on a journey to transform ideas into
+            captivating online experiences. <!--My love for coding and design fuels my continuous quest to learn and
+            innovate in this ever-evolving field.--> Join me on this thrilling adventure, and let's craft the digital
+            future together! </p>
+    </div>
+    <div class="container">
+        <h1 class="head" align="center">Recent Projects</h1>
+        <div class="projects">
+            <div class="img">
+                <a href="RTC.html" target="blank"><img src="images/clck.avif" alt="clock"></a>
+                <div class="text">
+                    <p class="desc">A simple real time clock made using <span>HTML5, CSS3, JS</span></p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="temp_converter.html" target="blank"><img src="images/temp.jpg" alt="temperature converter"></a>
+                <div class="text">
+                    <p class="desc">A real time temperature converter made using <span>HTML5, CSS3, js </span></p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="sjce.html" target="blank"><img src="images/land.jpg" alt="landing page"></a>
+                <div class="text">
+                    <p class="desc" style="color: black; font-weight: bolder;">A landing page made using <span>HTML5,
+                            CSS3</span></p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="Codebind_techonologies.html" target="blank"><img src="images/cdbnd.png" alt=""></a>
+                <div class="text">
+                    <p class="desc" style="color: black; font-weight: bolder;">Codebind Technologies landing page made
+                        using <span>HTML5, CSS3</span></p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="car_animation.html" target="_blank"><img src="images/car.gif" alt="car animation"></a>
+                <div class="text">
+                    <p class="desc" style="color: lightskyblue; font-weight: bolder;">A simple car animated landing page
+                        using <span>HTML5, CSS3</span></p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="portfolio2mobileview.html"><img src="images/resume_template.jpg" alt=""></a>
+                <div class="text">
+                    <p class="desc" style="color: black; font-weight: bolder;">A simple portfolio suitable for mobile
+                        devices made using
+                        <span>HTML5, CSS3</span>
+                    </p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="form.html"><img src="images/form.jpg" alt=""></a>
+                <div class="text">
+                    <p class="desc" style="color: black; font-weight: bolder;">A simple application form using
+                        <span>HTML5, CSS3</span>
+                    </p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="ferrari_web.html"><img src="images/title icon.jpg" alt=""></a>
+                <div class="text">
+                    <p class="desc" style="color: black; font-weight: bolder;">A Ferrari Webstie landing page made using
+                        <span>HTML5, CSS3</span>
+                    </p>
+                </div>
+            </div>
+            <div class="img">
+                <a href="counter.html"><img src="images/counter.png" alt=""></a>
+                <div class="text">
+                    <p class="desc" style="color: black; font-weight: bolder;">A counter made using
+                        <span>HTML5, CSS3, JS</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

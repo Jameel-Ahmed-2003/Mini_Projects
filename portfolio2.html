@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--  https://www.google.com/search?sxsrf=AB5stBjQtE6iS5JM3NSrj3qR2gz_nBKkWw:1691599685655&q=portfolio+about+page&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjDgfbyg9CAAxVBaPUHHT8nAXkQ0pQJegQIDBAB&biw=1920&bih=973&dpr=1#imgrc=rmBOzTWc8YsluM -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="shortcut icon" href="images\TITLE BAR ICON\index.png" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            background-color: #1F2334;
+            overflow: hidden;
+            color: white;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        nav {
+            height: 10vh;
+            width: 100vw;
+            display: flex;
+        }
+
+        nav .name {
+            padding: 20px;
+            padding-top: 40px;
+            padding-left: 140px;
+            width: 50vw;
+            height: 10vh;
+            font-size: 30px;
+            font-weight: bolder;
+            color: #FE4A56;
+            letter-spacing: 0.8px;
+        }
+
+        nav .list {
+            padding-top: 40px;
+            justify-content: space-around;
+            float: right;
+            height: 10vh;
+            width: 50vw;
+            display: flex;
+            list-style: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 0.8px;
+        }
+
+        nav .list li a {
+            position: relative;
+            text-decoration: none;
+            transition: 2s;
+            padding: 0 10px;
+        }
+
+        nav .list li a:after {
+            content: "";
+            position: absolute;
+            background-color: #FE4A56;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        nav .list li a:hover:after {
+            content: "";
+            width: 100%;
+        }
+
+        main {
+            display: flex;
+            height: 90vh;
+            width: 100vw;
+        }
+
+        .left {
+            height: 90vh;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left .content h2 {
+            color: #FE4A56;
+        }
+
+        .left .content h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .left .content p {
+            width: 490px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+        .left .content p span {
+            color: yellow;
+            text-shadow: 1px 1px 4px yellow;
+        }
+
+        .right {
+            height: 90vh;
+            width: 50vw;
+        }
+
+        .right img {
+            margin: 100px;
+            height: 700px;
+            width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px white;
+            filter: drop-shadow(0 0 30px white);
+        }
+
+        @media screen and (min-width:1300px) {
+            nav .list li a {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width:990px) {
+            nav .list li a {
+                font-size: 14px;
+                padding: 0px;
+            }
+        }
+
+        @media screen and (max-width:1600px) {
+            .right img {
+                margin-left: 70px;
+                height: 600px;
+                width: 600px;
+            }
+        }
+
+            @media screen and (max-width:1370px) {
+                .right img {
+                    margin: 40px;
+                    height: 500px;
+                    width: 500px;
+                }
+            }
+
+            @media screen and (max-height:603px) {
+                .right img {
+                    height: 400px;
+                    width: 400px;
+                }
+
+                nav .name {
+                    font-size: 15px;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="name">JAMSHID AHMED</div>
+        <ul class="list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="projects.html">SERVICES</a></li>
+            <li><a href="resume2.html">RESUME</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="left">
+            <div class="content">
+                <h2>WELCOME!</h2><br><br>
+                <h1>I Am Medical Coder</h1><br><br>
+                <!-- <p>I'm a Web developer with extensive experience for over 4 years. My expertise is to create a website
+                    design graphic design and many more</p> -->
+                <p>Experienced professional with a strong background in the <span>civil field</span> and a successful
+                    transition into
+                    <span>medical coding</span>. Leveraging my practical experience and adaptability, I am dedicated to
+                    contributing
+                    effectively to <span>Miramed Ajuba</span> as a medical coder. My commitment to accuracy, attention
+                    to detail, and problem-solving skills are assets I bring to this new endeavor.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="images/jams.jpg" alt="">
+            <!-- <img src="images/result.png" alt=""> -->
+        </div>
+    </main>
+</body>
+
+</html>

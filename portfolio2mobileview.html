@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            background-color: #1F2334;
+            color: white;
+        }
+        nav {
+            height: 38vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            border-bottom: 1px solid #FE4A56;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .left .content h2 {
+            color: #FE4A56;
+            display: flex;
+            justify-content: center;
+        }
+
+        .left .content h1 {
+            display: flex;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .left .content p {
+            width: 90%;
+            margin-left: 15px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+        .left .content p span {
+            color: yellow;
+            text-shadow: 1px 1px 4px yellow;
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+        }
+        .right img {
+            margin-top: 100px;
+            margin-left:30px;
+            margin-bottom: 50px;
+            height: 300px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px white;
+            filter: drop-shadow(0 0 30px white);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="list">
+            <br>
+            <li><a href="#">HOME</a></li><br>
+            <li><a href="#">ABOUT</a></li><br>
+            <li><a href="#">SERVICES</a></li><br>
+            <li><a href="#">PORTFOLIO</a></li><br>
+            <li><a href="#">BLOG</a></li><br>
+            <li><a href="#">CONTACT</a></li><br>
+        </ul>
+    </nav>
+    <main>
+        <div class="left">
+            <div class="content">
+                <h2>WELCOME!</h2><br><br>
+                <h1>I Am Medical Coder</h1><br><br>
+                <p>Experienced professional with a strong background in the <span>civil field</span> and a successful
+                    transition into
+                    <span>medical coding</span>. Leveraging my practical experience and adaptability, I am dedicated to
+                    contributing
+                    effectively to <span>Miramed Ajuba</span> as a medical coder. My commitment to accuracy, attention
+                    to detail, and problem-solving skills are assets I bring to this new endeavor.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="images/jams.jpg" alt="">
+            <!-- <img src="images/result.png" alt=""> -->
+        </div>
+    </main>
+</body>
+
+</html>

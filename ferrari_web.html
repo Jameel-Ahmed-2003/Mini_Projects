@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ferrari_web.css">
+    <title>Loading</title>
+    <style>
+        body{
+            height:100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:black;
+        }
+        img{
+            height:300px;
+            width: 370px;
+            animation: opacity 2s linear infinite alternate;
+        }
+         @keyframes opacity {
+            25%{
+                opacity:.1;
+            }
+            50%{
+                opacity:.3;
+            }
+            75%{
+                opacity:.6;
+            }
+            100%{
+                opacity:1;
+            }
+        }
+    </style>
+    <script>
+        setTimeout(function() {window.location.href = "ferrari_web_loaded.html";}, 3000); 
+    </script>
+</head>
+<body>
+    <div class="container"><img src="images/ferrari1.jpg" alt="logo"></div>
+</body>
+</html>
