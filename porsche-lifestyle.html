@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: 'porsche';
+            src: url('webfonts_porsche/porsche.ttf.woff') format('woff'),
+                url('webfonts_porsche/porsche.ttf.svg#porsche') format('svg'),
+                url('webfonts_porsche/porsche.ttf.eot'),
+                url('webfonts_porsche/porsche.ttf.eot?#iefix') format('embedded-opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #brand {
+            text-align: center;
+            font-family: 'porsche';
+        }
+
+        .address {
+            font-size: 24px;
+            display: flex;
+        }
+
+        header {
+            height: 140px;
+            padding-right: 20px;
+            gap: 540px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        header>div>img {
+            height: fit-content;
+            width: fit-content;
+            top: 20px;
+        }
+
+        header>div {
+            transition: .3s;
+        }
+
+        header>div:hover {
+            cursor: pointer;
+            opacity: .4;
+        }
+
+        iframe {
+            height: 90vh;
+            width: 100vw;
+        }
+
+        main {
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .porsche-lifestyle {
+            height: 70vh;
+            width: 100vw;
+            margin-bottom: 10px;
+        }
+
+        .grey {
+            background-color: #EEF1F1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            color: brown;
+        }
+
+        .col {
+            font: 18px sans-serif;
+            width: fit-content;
+            margin-right: 80px;
+            display: inline-block;
+        }
+
+        .col>ul>li {
+            line-height: 30px;
+        }
+
+        .subimage {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="brand">PORSCHE</h1>
+        <div class="address"><img src="images/icons8-location-40.png" alt="">
+            <p>Porsche Centre Chennai</p>
+        </div>
+    </header>
+    <main>
+        <img class="porsche-lifestyle" src="images/porsche-lifestyle.jpg" alt="">
+        <div class="grey">
+            <h1 style="margin-left: 60px;margin-bottom: 30px;">Porsche Lifestyle</h1>
+            <img src="images/icons8-menu-bar-32.png" alt="" class="menu-bar"
+                style="margin-left: 60px;position: sticky;top: 0;">
+        </div>
+        <br><br><br>
+        <p style="width: 50%;margin-left: 60px;line-height: 30px;font-size: 20px;">Clarity, excitement, precision - but
+            you already know that from our sports cars. With an attention to detail,
+            we have created individual accessories for creative drivers who wish to shape their own environment. The
+            Porsche Lifestyle range features top quality materials and eye-catching styling. Each product is as
+            contemporary as it is timeless. All Porsche Lifestyle products are true Porsche. To check availability and
+            price of any of the items displayed, contact your nearest Official Porsche Importer.
+        </p><br><br>
+        <div class="catalogue"
+            style="margin-left: 60px;display: flex;align-items: center;border: 2px solid rgb(14, 143, 179);width: 40%;">
+            <img src="images/porsche-normal.jpg" alt="" width="fit-content" height="fit-content"
+                style="margin-right: 140px;">
+            <a href="#">To Catalogue</a>
+        </div><br><br>
+        <p style="margin-left: 60px;font-size: 20px;">For detailed information and enquiries about the Porsche
+            lifestyle, please search for your nearest local <a href="#">Porsche center</a></p><br><br>
+        <h1 style="margin-left: 60px;">More About</h1><br><br>
+        <ul
+            style="display: flex;gap:30px;margin-left: 60px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: 18px;">
+            <li><a href="">Porsche Exclusive Manufacturer</a></li>
+            <li><a href="">| Genuine Porsche Tequipment accessories</a></li>
+            <li><a href="">| Factory Collection</a></li>
+            <li><a href="">| Porsche Classic</a></li>
+            <li><a href="">| Porsche Service</a></li>
+            <li><a href="">| Porsche Approved</a></li>
+        </ul><br>
+        <hr style="margin-left: 60px;width: 80%;margin-top: 30px;">
+        <br></br>
+        <div class="links" style="margin-left: 60px;width: 90%;height: 30vh;">
+            <div class="col">
+                <h3>Build & Find</h3>
+                <ul type="none">
+                    <li><a href="">Build your Porsche</a></li>
+                    <li><a href="">Compare Models</a></li>
+                    <li><a href="">Search Pre-Owned</a></li>
+                    <li><a href="">Search Pre-Owned</a></li>
+                    <li><a href="">Find your Porsche Centre</a></li>
+                    <li><a href="">Download the model range catalogue</a></li>
+                </ul>
+            </div>
+            <div class="col" style="position: absolute;">
+                <h3>Online Services</h3>
+                <ul type="none">
+                    <li><a href="">Porsche Login</a></li>
+                    <li><a href="">Sign up for News</a></li>
+                </ul>
+            </div>
+            <div class="col" style="float: left;">
+                <h3>Behind the Scenes</h3>
+                <ul>
+                    <li><a href="">Passion Motorsports</a></li>
+                    <li><a href="">Porsche Experience</a></li>
+                    <li><a href="">Porsche Classic</a></li>
+                    <li><a href="">Visit Porsche Museum</a></li>
+                </ul>
+            </div>
+            <div class="col" style="float:left;">
+                <h3>Porsche Company</h3>
+                <ul>
+                    <li><a href="">Latest News</a></li>
+                    <li><a href="">At a Glance</a></li>
+                    <li><a href="">Jobs & Careers</a></li>
+                    <li><a href="">Christophorus - The Porsche Magazine</a></li>
+                    <li>
+                        <span style="width: fit-content;padding-right: 20px;cursor: pointer;">
+                            <details>
+                                <summary>Share page</summary>
+                                <div class="box" style="display: flex;">
+                                    <img class="subimage" src="images/facebook.svg" alt="">
+                                    <img class="subimage" src="images/instagram.svg" alt="">
+                                    <img class="subimage" src="images/linkedin.svg" alt="">
+                                </div>
+                            </details>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
