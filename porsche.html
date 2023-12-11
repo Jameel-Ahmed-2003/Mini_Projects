@@ -5,8 +5,410 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Centre Chennai</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            font-family: 'Noto Serif', serif;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: orangered;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav>ul>li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: 25px;
+            line-height: 70px;
+            width: 200px;
+            text-align: center;
+        }
+
+        nav>ul>li:not(:nth-child(5)) {
+            margin-right: 30px;
+        }
+
+        nav>ul>li:hover {
+            background-color: black;
+        }
+
+        nav>ul>li:hover a {
+            color: white;
+        }
+
+        .menu-line {
+            height: 3px;
+            width: 25px;
+            background-color: black;
+            margin-block: 5px;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        @font-face {
+            font-family: 'porsche';
+            src: url('webfonts_porsche/porsche.ttf.woff') format('woff'),
+                url('webfonts_porsche/porsche.ttf.svg#porsche') format('svg'),
+                url('webfonts_porsche/porsche.ttf.eot'),
+                url('webfonts_porsche/porsche.ttf.eot?#iefix') format('embedded-opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #brand {
+            text-align: center;
+            font-family: 'porsche';
+        }
+
+        .address {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        header {
+            height: 140px;
+            width: 100vw;
+            padding-right: 20px;
+            gap: 25vw;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        header>div>img {
+            height: fit-content;
+            width: fit-content;
+        }
+
+        header>div {
+            transition: .3s;
+        }
+
+        header>div:hover {
+            cursor: pointer;
+            opacity: .4;
+        }
+
+
+        footer {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 20px;
+            width: 100vw;
+            background-color: #212225;
+            position: relative;
+            height: fit-content;
+            padding-block: 40px;
+            box-shadow: 0px 0px 11px 11px black;
+            color: white;
+        }
+
+        footer>span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .welcome-content {
+            font-size: 30px;
+            position: absolute;
+            z-index: 1;
+            top: 1320px;
+            left: 30px;
+        }
+
+        .slider {
+            left: 2%;
+            width: 90%;
+            height: 500px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .slider-inner {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(7, 600px);
+            grid-template-rows: repeat(7, 400px);
+            gap: 5px;
+            pointer-events: none;
+        }
+
+        .slide-img>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide-img>button {
+            padding: 15px;
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+            font-size: 14px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+
+        .rims ul li img {
+            height: fit-content;
+            width: fit-content;
+            position: absolute;
+        }
+
+        .main .container {
+            height: 70vh;
+            width: 50vw;
+            background: url('images/cookieconsent.jpg');
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            border-top-left-radius: 1.2rem;
+            border-bottom-left-radius: 1.2rem;
+            background-blend-mode: multiply;
+            background-color: rgb(84, 89, 113);
+        }
+
+        .main .container .content {
+            width: 80%;
+            left: 30px;
+            bottom: 0;
+            margin-bottom: 35px;
+            position: absolute;
+            height: fit-content;
+            width: fit-content;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .main .container .content button {
+            height: fit-content;
+            width: fit-content;
+            padding: 15px;
+            padding-inline: 20px;
+            border-color: white;
+            border-radius: 5px;
+            margin-right: 20px;
+            transition: .5s;
+        }
+
+        .main .container .content button:nth-of-type(2) {
+            color: white;
+            background: transparent;
+        }
+
+        .main .container .content button:nth-of-type(1) {
+            background-color: white;
+            color: #000;
+        }
+
+        .rims {
+            background-color: #0F0E13;
+            height: 680px;
+            width: 470px;
+            border-top-right-radius: 1.2rem;
+            border-bottom-right-radius: 1.2rem;
+        }
+
+        .main {
+            margin: 0 auto;
+            color: white;
+            display: flex;
+            height: fit-content;
+            width: fit-content;
+            margin-bottom: 120px;
+        }
+
+        .main a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main li {
+            padding-block: 30px;
+        }
+
+        .rims ul li a p {
+            position: absolute;
+            left: 80px;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main>.rims a:hover {
+            color: yellowgreen;
+        }
+
+        .main ul {
+            margin-top: 40px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .main button:nth-of-type(1):hover {
+            cursor: pointer;
+            opacity: .6;
+        }
+
+        .main button>a:nth-of-type(2):hover {
+            cursor: pointer;
+            opacity: .5;
+            /* background-color: grey; */
+        }
+
+        .rims ul li a {
+            display: flex;
+            align-items: center;
+        }
+
+        .details {
+            padding: 30px;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            position: absolute;
+            top: 3190px;
+            z-index: 1;
+            color: black;
+        }
+
+        .details a {
+            text-decoration: none;
+            color: #000;
+            display: flex;
+            align-items: center;
+            font-size: large;
+            transition: .4s;
+            width: fit-content;
+        }
+
+        .details a:hover {
+            background-color: rgb(188, 189, 189);
+        }
+
+        .details li {
+            padding-block: 10px;
+        }
+
+        .details h1,
+        h3 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .details .col {
+            width: 30%;
+            height: 80%;
+            margin-right: 20px;
+        }
+
+        .details span {
+            display: flex;
+            align-items: center;
+        }
+
+        .details span>p {
+            margin-right: 50px;
+            font-size: 20px;
+        }
+
+        @media all and (max-width:1340px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .logo {
+                align-self: flex-start;
+            }
+
+            nav>ul {
+                display: none;
+            }
+
+            nav>ul>li {
+                width: 100vw;
+                display: block;
+            }
+
+            .menu {
+                display: block;
+                position: absolute;
+                right: 40px;
+                top: 40px;
+            }
+
+            .showmenu {
+                display: block;
+            }
+
+            .logo {
+                position: relative;
+                left: 30px;
+            }
+
+            .rims {
+                height: 510px;
+                width: fit-content;
+            }
+
+            .welcome-content {
+                top: 1820px;
+                font-size: 20px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 30px;
+                margin-top: 100px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -185,7 +587,45 @@
         <span class="drive"><img src="images/icons8-steering-wheel-30.png" alt="">Test Drive</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const menu = document.querySelector('.menu'), menulist = document.querySelector('nav ul');
+        menu.addEventListener('click', () => {
+            menulist.classList.toggle('showmenu');
+        });
+
+        let slider = document.querySelector('.slider');
+        let innerSlider = document.querySelector('.slider-inner');
+        let pressed = false;
+        let startx = 0;
+        let x = 0;
+        slider.addEventListener('mousedown', (e) => {
+            pressed = true;
+            startx = e.offsetX - innerSlider.offsetLeft;
+            slider.style.cursor = 'grabbing';
+        });
+        slider.addEventListener('mouseenter', () => {
+            slider.style.cursor = 'grab';
+        });
+        slider.addEventListener('mouseup', () => {
+            slider.style.cursor = 'grab';
+        });
+        window.addEventListener('mouseup', () => {
+            pressed = false;
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!pressed) return;
+            e.preventDefault();
+            x = e.offsetX;
+            innerSlider.style.left = `${x - startx}px`;
+            checkboundary();
+        });
+        function checkboundary() {
+            let outer = slider.getBoundingClientRect();
+            let inner = innerSlider.getBoundingClientRect();
+            if (parseInt(innerSlider.style.left) > 0)
+                innerSlider.style.left = '0px';
+        }
+    </script>
 </body>
 
 </html>
