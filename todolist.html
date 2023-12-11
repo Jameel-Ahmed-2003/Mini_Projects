@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/todo-icon.png" type="image/x-icon">
+    <title>Todolist</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            overflow: none;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: url("images/todobg.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgb(56, 65, 82);
+        }
+
+        form p {
+            font-size: 30px;
+            font-family: 'Raleway', sans-serif;
+            color: palegreen;
+        }
+
+        #note {
+            font-size: 20px;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(16, 24, 41);
+            color: white;
+            border: none;
+        }
+
+        button {
+            border: none;
+            font-weight: bolder;
+            font-size: medium;
+            margin-right: 10px;
+            background: none;
+            cursor: pointer;
+        }
+
+        ul {
+            margin: 20px;
+        }
+
+        li {
+            margin-left: -20px;
+            list-style: none;
+            background-color: rgb(16, 24, 41);
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Arvo', serif;
+            margin: 10px;
+        }
+
+        #add {
+            color: rgb(159, 49, 217);
+        }
+
+        #add:hover {
+            color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="myForm">
+        <p>Task List</p><br>
+        <input id="input" autocomplete="off" required type="text" placeholder="What do you have planned?">
+        <button id="add">ADD TASK</button><br></br>
+        <p id="note">Tasks</p>
+        <ul id="todoList">
+            <!-- <li><button id="edit">EDIT</button><button id="del">DELETE</button>BUILD APP</li> -->
+        </ul>
+    </form>
+    <script>
+        let button = document.getElementById('add')
+        let todoList = document.getElementById('todoList')
+        let input = document.getElementById('input');
+        let todos = [];
+        window.onload = () => {
+            todos = JSON.parse(localStorage.getItem('todos')) || []
+            todos.forEach(todo => addtodo(todo))
+            alert("LOADED");
+            alert("Double click tast to remove");
+        }
+
+        button.addEventListener('click', () => {
+            todos.push(input.value)
+            localStorage.setItem('todos', JSON.stringify(todos))
+            addtodo(input.value)
+            input.value = ''
+        })
+
+        function addtodo(todo) {
+            let li = document.createElement('li');
+            li.innerText = todo;
+            todoList.appendChild(li)
+
+            li.addEventListener('click', () => {
+                li.style.textDecoration = 'line-through'
+                remove(todo)
+            })
+            li.addEventListener('dblclick', () => {
+                todoList.removeChild(li)
+                remove(todo)
+            })
+        }
+
+        function remove(todo) {
+            let index = todos.indexOf(todo)
+            if (index > -1) {
+                todos.splice(index, 1);
+            }
+            localStorage.setItem('todos', JSON.stringify(todos))
+        }
+    </script>
+</body>
+
+</html>
