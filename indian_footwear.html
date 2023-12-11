@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Footwear</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Slabo+27px&display=swap');
+
+        :root {
+            --color1: darksalmon;
+            --color2: darkslateblue;
+            --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('images/indian-footwear-logo.png');
+            background-color: #282634;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: var(--color1);
+            font-family: var(--font-family);
+            padding-block: 23px;
+        }
+
+        nav a {
+            color: var(--color2);
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bolder;
+        }
+
+        li {
+            font-size: 28px;
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .menu {
+            cursor: pointer;
+            display: none;
+        }
+
+        nav>.menu>.menu-line {
+            height: 3px;
+            width: 20px;
+            background-color: var(--color2);
+        }
+
+        nav>.menu>.menu-line:not(:last-child) {
+            margin-bottom: 3px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        marquee>img {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media all and (max-width:960px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav>.logo {
+                align-self: flex-start;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            nav>ul {
+                display: none;
+            }
+
+            nav>ul>li {
+                display: block;
+                text-align: center;
+                padding-block: 10px;
+            }
+
+            .menu {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 35px;
+            }
+
+            .showmenu {
+                display: block;
+            }
+        }
+
+        .section-1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            margin-block: 20px;
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: 400px 400px;
+            grid-template-rows: 400px 400px;
+            gap: 50px;
+        }
+
+        .category>div {
+            position: relative;
+            box-shadow: 0 0 12px 4px grey;
+            border-radius: 10px;
+        }
+
+        .category>div>img {
+            width: 97%;
+            height: 97%;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .category>div>img:hover {
+            transform: scale(1.2);
+            opacity: .6;
+        }
+
+        .category>div>h2 {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-family: 'Aoboshi One', serif;
+            font-family: 'Slabo 27px', serif;
+        }
+
+        .captions {
+            margin-block: 20px;
+            margin-left: 20px;
+            height: 850px;
+            width: 50%;
+            border-radius: 10px;
+            background-image: url("images/slide-3.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: lightslategray;
+            background-blend-mode: lighten;
+        }
+
+        .section-2 {
+            height: 70vh;
+            width: 100vw;
+            background-image: url("images/bg-img1.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: overlay;
+            background-color: #45474B;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .section-2>.content {
+            position: relative;
+            top: 40%;
+            text-align: center;
+        }
+
+        .section-2>.content span {
+            color: rgb(229, 72, 44);
+        }
+
+        .section-2 button {
+            text-transform: uppercase;
+            background-color: #3E1759;
+            color: white;
+            border: none;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            word-spacing: 5px;
+            padding: 15px 45px;
+            cursor: pointer;
+            position: relative;
+            bottom: 180px;
+            transition: .8s;
+        }
+
+        .section-2 button:hover {
+            background-color: black;
+        }
+
+        .section-3 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-block: 40px;
+            gap: 40px;
+        }
+
+        .section-3>div {
+            box-shadow: 0 0 12px 4px grey;
+            height: 300px;
+            width: 300px;
+            border: none;
+        }
+
+        .section-3>div>img {
+            width: 100%;
+            height: 100%;
+            transition: .4s;
+        }
+        .icons{
+            position: relative;
+            bottom:50%;
+            opacity: 0;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .section-3>div:hover .icons{
+            opacity: 1;
+        }
+        .section-3>div:hover{
+            cursor: pointer;
+            border: 1px solid black;
+        }
+        .section-3>div:hover img{
+            filter: blur(2px);
+        }
+        .section-3>div>button{
+            width: 100%;
+            padding-block:15px ;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+    </style>
+    <base href="images/">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="">INDIAN FOOTWEAR</a>
+            </div>
+            <ul type="none">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Brand</a></li>
+                <li><a href="#">My Orders</a></li>
+            </ul>
+            <div class="menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </nav>
+    </header>
+    <marquee behavior="scroll" direction="right" scrollamount="50" scrolldelay="1s">
+        <img src="adidas.webp" alt="">
+        <img src="puma.webp" alt="">
+        <img src="hummel.webp" alt="">
+        <img src="nike.webp" alt="">
+        <img src="img1.webp" alt="">
+    </marquee>
+    <section class="section-1">
+        <div class="category">
+            <div><img src="gym-sneakers.webp" alt="">
+                <h2>Gym Sneakers</h2>
+            </div>
+            <div><img src="hiking-boots.webp" alt="">
+                <h2>Hiking Boots</h2>
+            </div>
+            <div><img src="work-boots.webp" alt="">
+                <h2>Work Boots</h2>
+            </div>
+            <div><img src="chukkas.webp" alt="">
+                <h2>Chukkas</h2>
+            </div>
+        </div>
+        <div class="captions"></div>
+    </section>
+    <section class="section-2">
+        <div class="content">
+            <h2>THE SEASON BEGINS</h2>
+            <h1 style="font-size: 55px;letter-spacing: 10px;">PROMOTION <span>SALE OFF 50%</span></h1>
+            <h1 style="font-size: 160px;opacity: .4;">HURRY</h1>
+            <button>Shop Now</button>
+            <h1 style="position: relative;top:-43px">BEFORE OFFER ENDS</h1>
+    </section>
+    <section class="section-3">
+        <div>
+            <img src="yellow-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png" alt="love-circled--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png" alt="copy--v1"/>
+            </div>
+            <button>BAST SHOE</button>
+        </div>
+        <div>
+            <img src="red-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png" alt="love-circled--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png" alt="copy--v1"/>
+            </div>
+            <button>CLIMBING SHOE</button>
+        </div>
+        <div>
+            <img src="brown-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png" alt="love-circled--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png" alt="copy--v1"/>
+            </div>
+            <button>COURT SHOE</button>
+        </div>
+        <div>
+            <img src="white-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png" alt="love-circled--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png" alt="copy--v1"/>
+            </div>
+            <button>DERBY SHOE</button>
+        </div>
+        <div>
+            <img src="sandal-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png" alt="love-circled--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png" alt="copy--v1"/>
+                
+            </div>
+            <button>DIABETIC SHOE</button>
+        </div>
+    </section>
+    <script>
+        const menu = document.querySelector('.menu');
+        const menuList = document.querySelector('nav ul');
+        menu.addEventListener('click', () => {
+            menuList.classList.toggle('showmenu');
+        })
+    </script>
+</body>
+
+</html>
