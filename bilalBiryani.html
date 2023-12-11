@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal Biryani</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        #heading {
+            color: white;
+            background-color: #1D1D1C;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 40px;
+        }
+
+        #address,
+        #contact {
+            font-size: 13px;
+            font-weight: 400;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 23px;
+        }
+
+        span {
+            color: #FE9B00;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: #FE9B00;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: fit-content;
+        }
+
+        nav li {overflow: hidden;
+            text-align: center;
+            display: inline-block;
+            list-style-type: none;
+            font-size: 25px;
+            line-height: 50px;
+            height: 50px;
+            padding-inline: 30px;
+            padding-block: 3px;
+        }
+
+        li:hover {
+            background-color: black;
+        }
+
+        .menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-line {
+            height: 3px;
+            width: 25px;
+            background-color: black;
+        }
+
+        .menu-line:not(:nth-child(3)) {
+            margin-bottom: 3px;
+        }
+
+        @media all and (max-width: 1240px) {
+            nav li {
+                display: block;
+                width: 100vw;
+                margin: 0;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .menu {
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 102px;
+            }
+
+            ul {
+                display: none;
+            }
+
+            .showmenu {
+                display: block;
+            }
+        }
+
+        @media all and (max-width:1000px) {
+            #heading {
+                display: block;
+            }
+
+            img {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 100vw;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("img1.jpeg");
+            animation: changeBg 10s steps(1, end) infinite;
+        }
+
+        main>button {
+            background-color: lightgreen;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 18px;
+            outline: none;
+            border: none;
+        }
+
+        main>button:hover {
+            border: 1px solid orange;
+            background-color: #a7bcb9;
+        }
+
+        main>button:hover a {
+            color: #f95959;
+        }
+
+        @keyframes changeBg {
+            0% {
+                background-image: url("img1.jpeg");
+            }
+
+            20% {
+                background-image: url("img2.jpeg");
+            }
+
+            40% {
+                background-image: url("img3.jpeg");
+            }
+        }
+
+        section {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 50vh;
+            width: 100vw;
+            background-color: #1D1D1C;
+        }
+
+        .video>h1 {
+            color: #E8B847;
+            margin-left: 200px;
+            font-size: 50px;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .description>h1 {
+            font-size: 50px;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Great Vibes', cursive;
+            color: white;
+        }
+        .sub-section>img{
+            height:100px;
+            width:100px;
+        }
+        .sub-section{
+            margin-left: -30px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .contact{
+            padding-bottom: 40px;
+            height: fit-content;
+            width: 100vw;
+        }
+        .contact>h1{
+            text-align: center;
+            margin-block: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        form>input{
+            margin: 0 auto;
+            display: block;
+            padding: 10px 20px;
+            width: 50%;
+            margin-bottom: 20px;
+            outline: none;
+            border:2px solid #FE9B00
+        }
+        input::placeholder{
+            color: black;
+            font-weight: bold;
+        }
+        textarea{
+            margin: 0 auto;
+            display: block;
+            font-size: 20px;
+            padding: 5px;
+            resize: none;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .col {
+            width: 50%;
+            height: 70vh;
+        }
+
+
+        .col2 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .col1>h1,.col2>h1 {
+            font-family: 'Domine', serif;
+        }
+
+        #box {
+            height: 450px;
+            width: 550px;
+            border: 2px solid black;
+        }
+
+        #box>div {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #box>div:not(:last-child) {
+            margin-top: 30px;
+        }
+
+        #profile-icon {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-left: calc(100vw - 89vw);
+        }
+
+        #comment {
+            width: 70%;
+            font-family: 'Dancing Script', cursive;
+            line-height: 27px;
+        }
+        table{
+            font-family: 'Slabo 27px', serif;
+            font-weight: bolder;
+            margin-top:40px ;
+            margin-left: 180px;
+            padding: 10px;
+        }
+        td{
+            overflow: hidden;
+            height: 220px;
+            width: fit-content;
+        }
+        td>span>h4{
+            margin-left: 40px;
+            line-height: 53px;
+            color: red;
+            font-size: 22px;
+        }
+        .hover{
+            transition: transform .2s;
+        }
+        .hover:hover{
+            transform: scale(1.2);
+            opacity: .8;
+        }
+        td>p{
+            margin-top: 30px;
+            line-height: 24px;
+            width: 50%;
+            margin: 0 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="heading"><img src="logo.png" alt="">
+            <div id="address"><svg width="30" height="30" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FE9B00"
+                        d="M253.924 127.592a64 64 0 1 0 64 64a64.073 64.073 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.037 32.037 0 0 1-32 32Z" />
+                    <path fill="#FE9B00"
+                        d="M376.906 68.515A173.922 173.922 0 0 0 108.2 286.426l120.907 185.613a29.619 29.619 0 0 0 49.635 0l120.911-185.613a173.921 173.921 0 0 0-22.747-217.911Zm-4.065 200.444l-118.916 182.55l-118.917-182.55c-36.4-55.879-28.593-130.659 18.563-177.817a141.92 141.92 0 0 1 200.708 0c47.156 47.158 54.962 121.938 18.562 177.817Z" />
+                </svg>
+                <p><span>No-21,
+                        Gst Road,
+                    </span><br>Pallavaram,
+                    Chennai-600043</p>
+            </div>
+            <div id="contact"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#FE9B00">
+                        <path fill-rule="evenodd"
+                            d="M6.25 3a.25.25 0 0 1 .25-.25h7a.25.25 0 0 1 .25.25v12a.25.25 0 0 1-.25.25h-7a.25.25 0 0 1-.25-.25V3Z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 0h-9c-1.105 0-2 .943-2 2.105v15.79c0 1.162.895 2.105 2 2.105h9c1.105 0 2-.943 2-2.105V2.105C16.5.943 15.605 0 14.5 0Zm-9 18V2h9v16h-9Z"
+                            clip-rule="evenodd" />
+                        <path d="M10.5 16.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0Z" />
+                        <path fill-rule="evenodd" d="M9 16.5a1 1 0 1 1 2 0a1 1 0 0 1-2 0Z" clip-rule="evenodd" />
+                    </g>
+                </svg>
+                <p><span>+98841 18786 / 86800 67860</span><br><a
+                        href="mailto:bilalbiriyanipallavaram@gmail.com">biriyanipallavaram@gmail.com</a></p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">VIDEOS</a></li>
+                <li><a href="#">RESERVATION</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <div class="menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </nav>
+    </header>
+    <main><button><a href="#">ORDER NOW</a></button></main>
+    <section>
+        <div class="video">
+            <br>
+            <h1>Our Video</h1><br><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NCsZCu1Gib4?si=4V7fM9sbaJ99xPXK"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="description">
+            <h1><span style="color: #E8B847;">Welcome to </span>our Bilal Biryani</h1> <br></br>
+            <p style="color: white; font-family:Arial, Helvetica, sans-serif;line-height: 25px;">Bilal Briyani was Established in the years 2007. Get Customized food menus with<br>affordable price list.
+                From north indian to south indian food menus and dishes, we deliver<br>at its best quality taste with soul
+                touched taste. We do cater for Birthday Parties,<br>Corporate Events, House Warming Functions, Wedding
+                Anniversaries, betrothals, Outdoor<br>Caterings and all types of ceremony. We make your day more delighted
+                with our tasty,<br>delicious food services. Book Veg, Non-veg Buffet for lunch, dinner at cheap price.</p>
+                <div class="sub-section">
+                    <img src="short1.jpg" alt="">
+                    <img src="short2.jpg" alt="">
+                    <img src="short3.jpg" alt="">
+                    <img src="short4.jpg" alt="">
+                    <img src="short5.jpg" alt="">
+                </div>
+        </div>
+    </section>
+    <div class="contact">
+        <h1>Contact Us</h1>
+        <form action="">
+            <input type="text" placeholder="Name*" required autocomplete="on">
+            <input type="email" placeholder="Email*" required autocomplete="on">
+            <input type="text" placeholder="Subject*" required autocomplete="on">
+            <textarea name="" id="" cols="100" rows="4" placeholder="Message*" required></textarea><br><br>
+            <input type="submit">
+        </form>
+    </div>
+    <div class="wrapper">
+        <div class="col col1">
+            <h1 style="text-align: center;margin-top: 70px;">Popular Biryani</h1>
+            <table>
+                <tr>
+                    <td><br><br><br><img class="hover" width="180px" height="150px" src="short1.jpg" alt=""></td>
+                    <td><span class="red"><h4>Special Chicked Biryani</h4></span>
+                        <p>Bilal biryani is one of Chennai's most famous biryanis. The crown dish of the Bilal Biriyani.
+                            It
+                            is
+                            made with basmati rice, spices and goat meat. Popular variations use chicken instead of goat
+                            meat.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><br><br><img class="hover" src="mutton.jpg" alt=""></td>
+                    <td><span class="red"><h4>Mutton Biryani</h4></span>
+                        <p>Bilal Mutton biryani is one of Chennai's most famous biryanis. The crown dish of the Bilal
+                            Biriyani.
+                            It is made with basmati rice, spices and goat meat. Popular variations use Mutton instead of
+                            goat
+                            meat.</p></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col col2">
+            <h1>Testimonials</h1>
+            <div id="box">
+                <img src="testimonials.jpg" alt="" id="profile-icon">
+                <div id="comment">Excellent food from Pallavaram, I haven't taste Biryani like Bilal Biryani. Once I
+                    entered Bilal Biryani 3months back but I adicted to Still i go for Bilal only
+                </div>
+                <div id="name">SURESH DEVA</div><br><br>
+                <div style="color:#FE9B00 ;" id="place">Trichy</div>
+            </div>
+        </div>
+    </div>
+    <script>const menu = document.querySelector('.menu'),
+            menulist = document.querySelector('nav ul');
+
+        menu.addEventListener('click', () => {
+            menulist.classList.toggle('showmenu');
+        });
+    </script>
+</body>
+
+</html>
