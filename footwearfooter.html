@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        footer{background-color: #161617;}
+
+        footer>.footer-content {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        footer>.footer-content>menu>strong {
+            color: white;
+            transform: translateX(40px);
+        }
+
+        footer>.footer-content>menu>li {
+            color: #5c5c5c;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #5c5c5c;
+            transition: .3s;
+        }
+
+        footer>.footer-content i {
+            padding-right: 20px;
+        }
+
+        footer a:hover {
+            color: #571E7D;
+        }
+
+        footer>.footer-content>menu {
+            min-height: 50Vh;
+            margin-top: 60px;
+        }
+
+        footer>.footer-content>menu>strong {
+            display: inline-block;
+            height: 40px;
+            font-size: larger;
+        }
+
+        footer>.footer-content>menu li {
+            list-style: none;
+            padding-block: 20px;
+        }
+
+        footer>menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap:wrap ;
+            width: 100vw;
+            height: 10vh;
+            font-size: 20px;
+            color: white;
+            background-color: #571E7D;
+        }
+
+        footer .logo>img {
+            width: 100px;
+            height: 70px;
+        }
+
+        footer center {
+            background: #1B1A1B;
+            color: white;
+        }
+
+        footer>section>center>a {
+            display: inline-block;
+            margin: 10px
+        }
+
+        .register-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+
+        .register-section>.email{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .register-section>.email>input {
+            width:320px;
+            font-size: 20px;
+            padding: 20px;
+            border-bottom-color: white;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            background-color: transparent;
+            outline: none;
+            color: white;
+            transition:.3s;
+        }
+        .register-section>.email>input:focus{
+            border:1px solid #571E7D;
+        }
+        .media>a>i{
+            color: white;
+            font-size: 40px;
+        }
+    </style>
+    <base href="images/">
+</head>
+
+<body>
+    <footer>
+        <section class="register-section">
+            <div class="brand-logo"><img src="indian-footwear-logo.png" width="200px" height="140px" alt=""></div>
+            <div class="email">
+                <input type="email" placeholder="Your email address" autocomplete="off" spellcheck="false" required> <i style="font-size: 70px;color: white;" class='bx bx-chevron-right'></i>
+            </div>
+            <div class="media">
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-google-plus' ></i></a>
+                <a href="#"><i class='bx bxl-tumblr' ></i></a>
+            </div>
+        </section>
+        <div class="footer-content">
+            <menu>
+                <strong>Contact us</strong>
+                <li style="cursor: default;">
+                    <i class='bx bxs-home-alt-2'></i>
+                    <address style="display: inline;font-style: normal;font-size: 14px;">
+                        <pre
+                            style="display: inline;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">No: 58 A, East Madison Street,
+          Baltimore, MD, USA 4508</pre>
+                    </address>
+                </li>
+                <li style="cursor: default;">
+                    <i class='bx bxs-phone'></i>
+                    <span>000 - 123456789</span>
+                </li>
+                <li>
+                    <i class='bx bxs-envelope'></i>
+                    <a href="mailto:info@example.com">info@example.com</a>
+                </li>
+            </menu>
+            <menu>
+                <strong>Info</strong>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Search Terms</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Advanced Search</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Orders and Returns</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Consultant</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Help & FAQs</a></li>
+            </menu>
+            <menu>
+                <strong>Help</strong>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i>About</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i>Contact</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i>Privacy and policy</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i>Best Sellers</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i>Support</a></li>
+            </menu>
+            <menu>
+                <strong>Support</strong>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Search Terms</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Advanced Search</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Orders and Returns</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Consultant</a></li>
+                <li><a href="#"><i class='bx bx-right-arrow-alt'></i> Help & FAQs</a></li>
+            </menu>
+        </div>
+        <section>
+            <center>
+                <a href="#">Search Terms</a>|
+                <a href="#">Advanced Search</a>|
+                <a href="#">Orders and Returns</a>|
+                <a href="#">Consultant</a>|
+                <a href="#">Help & FAQs</a>
+            </center>
+        </section>
+        <menu>
+            <div class="copyrights">&copy; 2023 Shoes Design Themes</div>
+            <div class="logo">
+                <img src="american-express.png" alt="">
+                <img src="visa.jpg" alt="">
+                <img src="master -card.png" alt="">
+                <img src="paypal.jpg" alt="">
+                <img src="diners-club.png" alt="">
+            </div>
+        </menu>
+    </footer>
+</body>
+
+</html>

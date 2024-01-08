@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - login or signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(240, 242, 245);
+            gap: 20px
+        }
+
+        div {
+            width: fit-content;
+            width: 30%
+        }
+
+        form {
+            width: 350px;
+            height: fit-content;
+            padding: 20px;
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            border-radius: 3%
+        }
+
+        form input {
+            width: 300px;
+            font-size: 18px;
+            padding: 15px;
+            outline: none;
+            border: 1px solid rgb(238, 238, 238);
+            border-radius: 5px
+        }
+
+        form button {
+            font-weight: bolder;
+            color: white;
+            padding-block: 15px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer
+        }
+
+        form button:first-of-type {
+            font-size: 20px;
+            width: 100%;
+            background: #1976F2
+        }
+
+        form button:nth-of-type(2) {
+            background: rgb(67, 183, 43);
+            font-size: 16px;
+            padding-inline: 10px;
+            transition: .2s
+        }
+
+        form button:nth-of-type(2):hover {
+            background: rgb(48, 128, 32)
+        }
+
+        form a:first-of-type {
+            text-decoration: none;
+            color: #1669d5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        form div {
+            width: 100%;
+            height: 1px;
+            background-color: slategray
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="" style="margin-left:-30px"
+            width="300px">
+        <p style="font-size: 28px;line-height:32px;width: 100%;font-family:Verdana, Geneva, Tahoma, sans-serif">Facebook
+            helps you connect and share with the people in your life.</p>
+    </div>
+    <form method="POST" action="login.php" autocomplete="off" aria-autocomplete="none">
+        <input type="text" placeholder="Email address or phone number" name="uname" required autofocus>
+        <input type="password" placeholder="Password" name="pwd" required>
+        <button type="submit" align="center">Log in</button>
+        <a href="">Forgotten password?</a>
+        <div></div>
+        <button><a href="signup.html" style="color: white;">Create new account</a></button>
+    </form>
+</body>
+
+</html>

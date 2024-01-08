@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Indian Footwear</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Slabo+27px&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+        :root {
+            --color1: darksalmon;
+            --color2: darkslateblue;
+            --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('images/indian-footwear-logo.png');
+            background-color: #282634;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: var(--color1);
+            font-family: var(--font-family);
+            padding-block: 23px;
+        }
+
+        nav a {
+            color: var(--color2);
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bolder;
+        }
+
+        li {
+            font-size: 28px;
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .menu {
+            cursor: pointer;
+            display: none;
+        }
+
+        nav>.menu>.menu-line {
+            height: 3px;
+            width: 20px;
+            background-color: var(--color2);
+        }
+
+        nav>.menu>.menu-line:not(:last-child) {
+            margin-bottom: 3px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        marquee>img {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media all and (max-width:960px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav>.logo {
+                align-self: flex-start;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            nav>ul {
+                display: none;
+            }
+
+            nav>ul>li {
+                display: block;
+                text-align: center;
+                padding-block: 10px;
+            }
+
+            .menu {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 35px;
+            }
+
+            .showmenu {
+                display: block;
+            }
+        }
+
+        .section-1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            margin-block: 20px;
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: 400px 400px;
+            grid-template-rows: 400px 400px;
+            gap: 50px;
+        }
+
+        .category>div {
+            position: relative;
+            box-shadow: 0 0 12px 4px grey;
+            border-radius: 10px;
+        }
+
+        .category>div>img {
+            width: 97%;
+            height: 97%;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .category>div>img:hover {
+            transform: scale(1.2);
+            opacity: .6;
+        }
+
+        .category>div>h2 {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-family: 'Aoboshi One', serif;
+            font-family: 'Slabo 27px', serif;
+        }
+
+        .captions {
+            margin-block: 20px;
+            margin-left: 20px;
+            height: 850px;
+            width: 50%;
+            border-radius: 10px;
+            background-image: url("images/slide-3.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: lightslategray;
+            background-blend-mode: lighten;
+        }
+
+        .section-2 {
+            height: 70vh;
+            width: 100vw;
+            background-image: url("images/bg-img1.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: overlay;
+            background-color: #45474B;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .section-2>.content {
+            position: relative;
+            top: 40%;
+            text-align: center;
+        }
+
+        .section-2>.content span {
+            color: rgb(229, 72, 44);
+        }
+
+        .section-2 button {
+            text-transform: uppercase;
+            background-color: #3E1759;
+            color: white;
+            border: none;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            word-spacing: 5px;
+            padding: 15px 45px;
+            cursor: pointer;
+            position: relative;
+            bottom: 180px;
+            transition: .8s;
+        }
+
+        .section-2 button:hover {
+            background-color: black;
+        }
+
+        .section-3 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-block: 40px;
+            gap: 40px;
+        }
+
+        .section-3>div {
+            box-shadow: 0 0 12px 4px grey;
+            height: 300px;
+            width: 300px;
+            border: none;
+        }
+
+        .section-3>div>img {
+            width: 100%;
+            height: 100%;
+            transition: .4s;
+        }
+
+        .icons {
+            position: relative;
+            bottom: 50%;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-3>div:hover .icons {
+            opacity: 1;
+        }
+
+        .section-3>div:hover {
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        .section-3>div:hover img {
+            filter: blur(2px);
+        }
+
+        .section-3>div>button {
+            width: 100%;
+            padding-block: 15px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        iframe {
+            margin-top: 10vh;
+            width: 100vw;
+            height: 90vh;
+            position: relative;
+            top:1500px;
+        }
+
+
+        /* ABOUT PAGE */
+
+
+        #about {
+            margin-top: 150px;
+            width: 100vw;
+            height: 90vh;
+            background-image: url('https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: rgb(179, 225, 64);
+        }
+
+        .background-blend {
+            padding-top: 5%;
+            height: 10vh;
+            width: 100vw;
+            background: transparent;
+            background-blend-mode: darken;
+        }
+
+        .background-blend>h1 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        #general-about {
+            margin-top: 80vh;
+            height: fit-content;
+            background-color: brown;
+            padding-bottom: 20vh;
+        }
+
+        .about-common {
+            padding-top: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #about-1>img {
+            height: 400px;
+            width: 600px;
+
+        }
+
+        .about-common hgroup {
+            width: 40%;
+            line-height: 30px;
+            color: rgb(179, 225, 64);
+        }
+
+        .about-common hgroup>p {
+            font-size: 20px;
+        }
+
+        .about-common hgroup>center>h1 {
+            font-family: 'Satisfy', cursive;
+            transform: translateY(-70px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="">INDIAN FOOTWEAR</a>
+            </div>
+            <ul type="none">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#PRODUCTS">Products</a></li>
+                <li><a href="#">Brand</a></li>
+                <li><a href="#">My Orders</a></li>
+            </ul>
+            <div class="menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </nav>
+    </header>
+    <marquee behavior="scroll" direction="right" scrollamount="50" scrolldelay="1s">
+        <img src="images/adidas.webp" alt="">
+        <img src="images/puma.webp" alt="">
+        <img src="images/hummel.webp" alt="">
+        <img src="images/nike.webp" alt="">
+        <img src="images/img1.webp" alt="">
+    </marquee>
+    <section class="section-1" id="PRODUCTS">
+        <div class="category">
+            <div><img src="images/gym-sneakers.webp" alt="">
+                <h2>Gym Sneakers</h2>
+            </div>
+            <div><img src="images/hiking-boots.webp" alt="">
+                <h2>Hiking Boots</h2>
+            </div>
+            <div><img src="images/work-boots.webp" alt="">
+                <h2>Work Boots</h2>
+            </div>
+            <div><img src="images/chukkas.webp" alt="">
+                <h2>Chukkas</h2>
+            </div>
+        </div>
+        <div class="captions"></div>
+    </section>
+    <section class="section-2">
+        <div class="content">
+            <h2>THE SEASON BEGINS</h2>
+            <h1 style="font-size: 55px;letter-spacing: 10px;">PROMOTION <span>SALE OFF 50%</span></h1>
+            <h1 style="font-size: 160px;opacity: .4;">HURRY</h1>
+            <button>Shop Now</button>
+            <h1 style="position: relative;top:-43px">BEFORE OFFER ENDS</h1>
+    </section>
+    <section class="section-3">
+        <div>
+            <img src="images/yellow-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png"
+                    alt="love-circled--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png"
+                    alt="copy--v1" />
+            </div>
+            <button>BAST SHOE</button>
+        </div>
+        <div>
+            <img src="images/red-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png"
+                    alt="love-circled--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png"
+                    alt="copy--v1" />
+            </div>
+            <button>CLIMBING SHOE</button>
+        </div>
+        <div>
+            <img src="images/brown-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png"
+                    alt="love-circled--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png"
+                    alt="copy--v1" />
+            </div>
+            <button>COURT SHOE</button>
+        </div>
+        <div>
+            <img src="images/white-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png"
+                    alt="love-circled--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png"
+                    alt="copy--v1" />
+            </div>
+            <button>DERBY SHOE</button>
+        </div>
+        <div>
+            <img src="images/sandal-shoe.webp" alt="">
+            <div class="icons">
+                <img width="44" height="44" src="https://img.icons8.com/plumpy/24/love-circled--v1.png"
+                    alt="love-circled--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
+                <img width="44" height="44" src="https://img.icons8.com/material-two-tone/24/copy--v1.png"
+                    alt="copy--v1" />
+
+            </div>
+            <button>DIABETIC SHOE</button>
+        </div>
+    </section>
+    <div id="about">
+        <div class="background-blend">
+            <h1>ABOUT US</h1>
+        </div>
+        <div id="general-about">
+            <div id="about-1" class="about-common">
+                <img data-aos="fade-right" data-aos-delay="450"
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/679b9121672815.563062a9a20ab.JPG"
+                    alt="">
+                <hgroup data-aos="fade-left" data-aos-delay="550">
+                    <center>
+                        <h1>Our Story</h1>
+                    </center><br>
+                    <p>Established in 2000, <span
+                            style="color:lime;text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;">Indian
+                            Footwear</span> was born out of a love for quality craftsmanship, timeless design, and a
+                        dedication to providing footwear that not only looks good but feels good too. From the
+                        beginning, our mission has been to offer a diverse range of styles that cater to every taste and
+                        occasion, ensuring that you'll always find the right shoe for any moment in life.</p>
+                </hgroup>
+            </div>
+            <div id="about-2" class="about-common">
+                <hgroup data-aos="fade-right" data-aos-delay="700">
+                    <center>
+                        <h1>Quality Craftsmanship</h1>
+                    </center>
+                    <p>We understand the importance of quality when it comes to footwear. That's why we source our
+                        products from reputable manufacturers who share our commitment to craftsmanship. Each pair of
+                        shoes in our collection is a testament to the artistry and attention to detail that goes into
+                        creating footwear that stands the test of time.</p>
+                </hgroup>
+                <img data-aos="fade-left" data-aos-delay="1000"
+                    src="https://img.freepik.com/premium-photo/spacious-large-women-s-men-s-shoe-store_307890-6366.jpg"
+                    alt="">
+            </div>
+            <div id="about-2" class="about-common">
+                <img data-aos="fade-right" data-aos-delay="1250"
+                    src="images/comfort.jpg" width="600px" height="400px"
+                    alt="">
+                <hgroup data-aos="fade-left" data-aos-delay="1500">
+                    <center>
+                        <h1>Comfort First</h1>
+                    </center>
+                    <p>We believe that style shouldn't compromise comfort. That's why we prioritize comfort in every
+                        pair of shoes we offer. Our commitment to providing footwear that feels as good as it looks is
+                        reflected in the materials we use and the attention to detail in our designs. Say goodbye to
+                        compromising - at Indian Footwear, you can have both style and comfort.</p>
+                </hgroup>
+            </div>
+        </div>
+    </div>
+    <iframe src="footwearfooter.html" frameborder="0"></iframe>
+    <script>
+        const menu = document.querySelector('.menu');
+        const menuList = document.querySelector('nav ul');
+        menu.addEventListener('click', () => {
+            menuList.classList.toggle('showmenu');
+        })
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,98 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-engine-16.png">
     <title>AUTO</title>
     <style>
-        .container{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+        }
+
+        .sidebar {
+            float: left;
+            padding-left: 20px;
+            height: 100vh;
+            width: 15vw;
+            background-color: rgb(10, 10, 55);
+            color: white;
+        }
+
+        .sidebar .icns-imgs {
+            height: 30vh;
+            width: 30vw;
+        }
+
+        .sidebar .icns-imgs img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .sidebar .icns-imgs h3 {
+            padding-top: 17px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            font-size: 24px;
+        }
+
+        .sidebar .icns-imgs .icons {
+            margin-top: 20px;
+            margin-left: 10px;
+            animation: moveright 2s ease-in-out;
+        }
+
+        .sidebar .icns-imgs .icons img {
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            margin-right: 7px;
+        }
+
+        .sidebar ul li {
+            list-style: none;
+            display: flex;
+        }
+
+        .sidebar ul li span {
+            cursor: pointer;
+            padding-bottom: 30px;
+            font-size: 40px;
+            animation: rotate 2s linear;
+        }
+
+        .sidebar ul li p {
+            padding-left: 40px;
+            padding-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .sidebar ul li p a {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            float: right;
+            height: 100vh;
+            width: 84vw;
+            background: url("../images/jams.jpg");
+            background-size: cover;
+        }
+
+        main .content {
+            padding-left: 1040px;
+            padding-top: 400px;
+        }
+
+        main .content h1 {
+            font-size: 60px;
+            font-family: 'Borel', cursive;
+            /* transition: 2s; */
+            animation: movedown 2s ease-in-out;
+        }
+
+        main .content h3 {
+            font-size: 50px;
+            animation: moveup 2s ease-in-out;
+        }
+
+        .sidebar .icns-imgs .icons img:hover {
+            background-color: lime;
+        }
+
+        @keyframes moveright {
+            0% {
+                transform: translateX(-300px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+
+        }
+
+        @keyframes movedown {
+            0% {
+                transform: translateY(-300px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes moveup {
+            0% {
+                transform: translateY(300px);
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+        }
+
+        li span:hover {
+            transition: 1s;
+            transform: rotateY(180deg);
+        }
+
+        .container {
             display: flex;
             height: 100vh;
             width: 100vw;
         }
-        .images{
+
+        .images {
             /* float: left; */
             width: fit-content;
-            display: grid; 
+            display: grid;
             grid-template-rows: 300px 300px 300px;
             grid-template-columns: 300px 300px 300px;
         }
-        .details{
+
+        .details {
             /* float: right; */
-            height:904px;
+            height: 904px;
             width: 1014px;
         }
-        .images> .item> img{
+
+        .images>.item>img {
             padding: 10px;
             border-radius: 20px;
             height: 300px;
             width: 300px;
-            transition:1s;
+            transition: 1s;
         }
-        .images> .item> img:hover{
+
+        .images>.item>img:hover {
             transform: scale(1.3);
             z-index: 2;
             cursor: pointer;
         }
-        table{
+
+        table {
             text-align: center;
             margin-left: 350px;
             height: fit-content;
             width: fit-content;
             border: 2px solid green;
         }
-        tr{
-            height:10px;
+
+        tr {
+            height: 10px;
         }
-        td{ 
+
+        td {
             padding: 10px;
             width: fit-content;
             border: 2px solid red;
         }
-        ul{
+
+        ul {
             padding-left: 20px;
         }
-        #model{
+
+        #model {
             margin-left: 250px;
         }
-        .pros, .cons{
+
+        .pros,
+        .cons {
             margin-top: 40px;
             margin-left: 360px;
         }
-        @media screen and (max-width: 1830px)
-        {
-            table{
-                margin-left:10px;
+
+        @media screen and (max-width: 1830px) {
+            table {
+                margin-left: 10px;
             }
-            .images{
+
+            .images {
                 grid-template-rows: 200px 200px 200px;
                 grid-template-columns: 200px 200px 200px;
                 width: fit-content;
             }
-            .images> .item> img{
+
+            .images>.item>img {
                 height: 100%;
                 width: 100%;
             }
-            .details{
+
+            .details {
                 width: 600px;
             }
-            .pros, .cons{
-                margin-left:40px;
+
+            .pros,
+            .cons {
+                margin-left: 40px;
             }
-            .container> .details{
+
+            .container>.details {
                 margin-left: 120px;
             }
         }
-        @media screen and (max-width:1500px)
-        {
-            .details{
-                width:500px;
+
+        @media screen and (max-width:1500px) {
+            .details {
+                width: 500px;
             }
         }
-        @media screen and (max-width:1200px){
-            .images{
+
+        @media screen and (max-width:1200px) {
+            .images {
                 grid-template-rows: 100px 100px 100px;
                 grid-template-columns: 100px 100px 100px;
             }
@@ -100,6 +263,7 @@
     </style>
     <base href="images/" target="blank">
 </head>
+
 <body>
     <div class="container">
         <div class="images">
@@ -118,14 +282,20 @@
             <br>
             <table>
                 <tr>
-                    <td><img id="i1" src="icons8-petrol-station-30.png" alt="FuelType" title="Fuel Type"><br><b id="s1">Fuel type</b></td>
-                    <td><img id="i2" src="icons8-engine-30.png" alt="Engine" title="Engine"><br><b id="s2">Engine</b></td>
-                    <td><img id="i3" src="icons8-turbo-30.png" alt="Power and Torque" title="Power and Torque"><br><b id="s3">Power and Torque</b></td>
+                    <td><img id="i1" src="icons8-petrol-station-30.png" alt="FuelType" title="Fuel Type"><br><b
+                            id="s1">Fuel type</b></td>
+                    <td><img id="i2" src="icons8-engine-30.png" alt="Engine" title="Engine"><br><b id="s2">Engine</b>
+                    </td>
+                    <td><img id="i3" src="icons8-turbo-30.png" alt="Power and Torque" title="Power and Torque"><br><b
+                            id="s3">Power and Torque</b></td>
                 </tr>
                 <tr>
-                    <td><img id="i4" src="icons8-auto-30.png" alt="Drive Train" title="Drive Train"><br><b id="s4">Drive Train</b></td>
-                    <td><img id="i5" src="icons8-speedometer-30.png" alt="Acceleration" title="Acceleration"><br><b id="s5">Acceleration</b></td>
-                    <td><img id="i6" src="icons8-speed-30.png" alt="Top Speed" title="Top Speed"><br><b id="s6">Top Speed</b></td>
+                    <td><img id="i4" src="icons8-auto-30.png" alt="Drive Train" title="Drive Train"><br><b id="s4">Drive
+                            Train</b></td>
+                    <td><img id="i5" src="icons8-speedometer-30.png" alt="Acceleration" title="Acceleration"><br><b
+                            id="s5">Acceleration</b></td>
+                    <td><img id="i6" src="icons8-speed-30.png" alt="Top Speed" title="Top Speed"><br><b id="s6">Top
+                            Speed</b></td>
                 </tr>
             </table>
             <div class="pros">
@@ -146,33 +316,33 @@
     </div>
     <script>
         // imageid i spec s
-        var i1=document.getElementById("i1")
-        var i2=document.getElementById("i2")
-        var i3=document.getElementById("i3")
-        var i4=document.getElementById("i4")
-        var i5=document.getElementById("i5")
-        var i6=document.getElementById("i6")
-        var s1=document.getElementById("s1")
-        var s2=document.getElementById("s2")
-        var s3=document.getElementById("s3")
-        var s4=document.getElementById("s4")
-        var s5=document.getElementById("s5")
-        var s6=document.getElementById("s6")
+        var i1 = document.getElementById("i1")
+        var i2 = document.getElementById("i2")
+        var i3 = document.getElementById("i3")
+        var i4 = document.getElementById("i4")
+        var i5 = document.getElementById("i5")
+        var i6 = document.getElementById("i6")
+        var s1 = document.getElementById("s1")
+        var s2 = document.getElementById("s2")
+        var s3 = document.getElementById("s3")
+        var s4 = document.getElementById("s4")
+        var s5 = document.getElementById("s5")
+        var s6 = document.getElementById("s6")
         console.log(model.innerHTML)
-        function car1(){
+        function car1() {
             model.innerHTML = "Ferrari F8 Tributo Car Specifications"
-            i1.src="icons8-petrol-station-30.png"
-            i2.src="icons8-engine-30.png"
-            i3.src="icons8-turbo-30.png"
-            i4.src="icons8-auto-30.png"
-            i5.src="icons8-speedometer-30.png"
-            i6.src="icons8-speed-30.png"
-            i1.title="Fuel Type"
-            i2.title="Engine"
-            i3.title="Power and Torque"
-            i4.title="Drive Train"
-            i5.title="Acceleration"
-            i6.title="Top Speed"
+            i1.src = "icons8-petrol-station-30.png"
+            i2.src = "icons8-engine-30.png"
+            i3.src = "icons8-turbo-30.png"
+            i4.src = "icons8-auto-30.png"
+            i5.src = "icons8-speedometer-30.png"
+            i6.src = "icons8-speed-30.png"
+            i1.title = "Fuel Type"
+            i2.title = "Engine"
+            i3.title = "Power and Torque"
+            i4.title = "Drive Train"
+            i5.title = "Acceleration"
+            i6.title = "Top Speed"
             s1.innerHTML = "Petrol"
             s2.innerHTML = "3902 CC"
             s3.innerHTML = "711 bhp & 770NM"
@@ -180,20 +350,20 @@
             s5.innerHTML = "2.9 seconds"
             s6.innerHTML = "340 kM/H"
         }
-        function car2(){
+        function car2() {
             model.innerHTML = "Ferrari SF90 Stradale Car Specifications"
-            i1.src="icons8-co2-emissions-30.png"
-            i2.src="icons8-electric-vehicle-30.png"
-            i3.src="icons8-turbo-30.png"
-            i4.src="icons8-nitrous-oxide-32.png"
-            i5.src="icons8-speedometer-30.png"
-            i6.src="icons8-speed-30.png"
-            i1.title="CO2 Emission"
-            i2.title="Electric Energy Consumption"
-            i3.title="Power and Torque"
-            i4.title="No. of Cylinders"
-            i5.title="Acceleration"
-            i6.title="Top Speed"
+            i1.src = "icons8-co2-emissions-30.png"
+            i2.src = "icons8-electric-vehicle-30.png"
+            i3.src = "icons8-turbo-30.png"
+            i4.src = "icons8-nitrous-oxide-32.png"
+            i5.src = "icons8-speedometer-30.png"
+            i6.src = "icons8-speed-30.png"
+            i1.title = "CO2 Emission"
+            i2.title = "Electric Energy Consumption"
+            i3.title = "Power and Torque"
+            i4.title = "No. of Cylinders"
+            i5.title = "Acceleration"
+            i6.title = "Top Speed"
             s1.innerHTML = "160 G/KM"
             s2.innerHTML = "120 WH/KM"
             s3.innerHTML = "800 NM at 6000 RPM"
@@ -201,20 +371,20 @@
             s5.innerHTML = "2.5 seconds"
             s6.innerHTML = "340 KM/H"
         }
-        function car3(){
+        function car3() {
             model.innerHTML = "Ferrari 296 GTB Car Specifications"
-            i1.src="icons8-co2-emissions-30.png"
-            i2.src="icons8-electric-vehicle-30.png"
-            i3.src="icons8-turbo-30.png"
-            i4.src="icons8-gearbox-31.png"
-            i5.src="icons8-speedometer-30.png"
-            i6.src="icons8-speed-30.png"
-            i1.title="CO2 Emission"
-            i2.title="Electric Energy Consumption"
-            i3.title="Power and Torque"
-            i4.title="Transmission"
-            i5.title="Acceleration"
-            i6.title="Top Speed"
+            i1.src = "icons8-co2-emissions-30.png"
+            i2.src = "icons8-electric-vehicle-30.png"
+            i3.src = "icons8-turbo-30.png"
+            i4.src = "icons8-gearbox-31.png"
+            i5.src = "icons8-speedometer-30.png"
+            i6.src = "icons8-speed-30.png"
+            i1.title = "CO2 Emission"
+            i2.title = "Electric Energy Consumption"
+            i3.title = "Power and Torque"
+            i4.title = "Transmission"
+            i5.title = "Acceleration"
+            i6.title = "Top Speed"
             s1.innerHTML = "149 G/KM"
             s2.innerHTML = "140 WH/KM"
             s3.innerHTML = "740 NM at 6250 RPM"
@@ -222,6 +392,7 @@
             s5.innerHTML = "2.9 seconds"
             s6.innerHTML = "330 KM/H"
         }
-    </script> 
+    </script>
 </body>
+
 </html>
